@@ -1,3 +1,7 @@
+:root {
+  --max-width: 1024px;
+  --container-width: 90%;
+}
 .img-fluid {
     max-width: 100%;
     height: auto;
