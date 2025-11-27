@@ -1,14 +1,27 @@
-.body {
-    margin: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 h2 {
-    color: #2c3e50;
+  color: #2c3e50;
 }
 p {
-    line-height: 1.6;
-    font-size: 16px;
-    margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.landing {
+  header {
+    text-align: center;
+    position: relative;
+  }
+  h1 {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+  }
 }
