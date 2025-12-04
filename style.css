@@ -19,14 +19,14 @@ h2 {
     font-size: 2rem;
     color: white;
   }
-  .p {
-  line-height: 1.6;
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: center;
-}
 }
 .img-fluid{
   width: 100%;
   height: auto;
+}
+p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
 }
