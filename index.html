@@ -1,319 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    >
-    <!-- Font Awesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    >
-    <!-- This is the imported Domine font. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css">
-    <title>Andre Lavilla's About Me Page</title>
-  </head>
-  <body>
-    <nav class="my-nav my-fixed-top">
-      <!--  
-       bootstrap class navbar-expand-sm causes the navbar to collapse on small screens 
-       by using a media query to display either the navbar-toggler or navbar-collapse
-      -->
-      <div class="navbar navbar-expand-sm my-nav-container">
-        <div class="my-brand-container">
-          <a class="navbar-brand" href="#header">About Me</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#bio">Bio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- header section -->
-    <header id="header" class="my-container">
-      <hgroup class="my-card header">
-        <h1 class="domine-text">Andre Lavilla</h1>
-      </hgroup>
-    </header>
-    <main class="my-container">
-      <article id="bio" class="my-card bio">
-        <header>
-          <h2>About Me</h2>
-        </header>
-        <div class="my-row">
-          <figure class="my-col-12 my-col-md-6 vertical-center">
-            <img
-              src="Andre_Lavilla.jpeg"
-              alt="Andre Lavilla"
-              class="image-cover circle-container"
-            >
-          </figure>
-          <section class="my-col-12 my-col-md-6 vertical-center">
-            <ul class="my-list">
-              <li>
-                I am currently a pre-apprentice for a non-profit organization
-                called Dev/Mission.
-              </li>
-              <li>
-                I am a graduate from a four-year university called San Francisco
-                State University, in which I have a bachelor's degree for my
-                major in Computer Science.
-              </li>
-              <li>
-                I would like to learn more about computers and the tech world
-                and how they function.
-              </li>
-              <li>
-                I am aiming to pursue a job as a software engineer, web
-                developer, and related fields.
-              </li>
-              <li>
-                I have a passion for learning new skills, so that I could solve
-                the problems happening around the world and also enjoy my time
-                in the tech world.
-              </li>
-              <li>
-                I also have a passion for meeting new people, who are here to
-                elevate my skills in the tech world.
-              </li>
-              <li>
-                We would both thrive in solving the problems happening right
-                now.
-              </li>
-            </ul>
-          </section>
-        </div>
-      </article>
-      <article id="skills" class="my-card skills">
-        <header>
-          <h2 class="">Skills</h2>
-        </header>
-        <section>
-          <h3>Software:</h3>
-          <ul class="list-group">
-            <li class="list-group-item skill-item-color">Workbench</li>
-            <li class="list-group-item skill-item-color">Google Workspace</li>
-            <li class="list-group-item skill-item-color">Bootstrap</li>
-            <li class="list-group-item skill-item-color">GitHub</li>
-            <li class="list-group-item skill-item-color">Figma</li>
-            <li class="list-group-item skill-item-color">UX/UI Design</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Programming:</h3>
-          <ul class="list-group">
-            <li class="list-group-item skill-item-color">C++</li>
-            <li class="list-group-item skill-item-color">Java</li>
-            <li class="list-group-item skill-item-color">Python</li>
-            <li class="list-group-item skill-item-color">HTML</li>
-            <li class="list-group-item skill-item-color">CSS</li>
-            <li class="list-group-item skill-item-color">JavaScript</li>
-            <li class="list-group-item skill-item-color">MySQL</li>
-            <li class="list-group-item skill-item-color">
-              Object-Oriented Programming (OOP)
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3>Internet of Things:</h3>
-          <ul class="list-group">
-            <li class="list-group-item skill-item-color">Circuits</li>
-            <li class="list-group-item skill-item-color">Soldering</li>
-            <li class="list-group-item skill-item-color">TinkerCAD</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Soft Skills:</h3>
-          <ul class="list-group">
-            <li class="list-group-item skill-item-color">
-              Performance Motivation
-            </li>
-            <li class="list-group-item skill-item-color">Flexible Approach</li>
-            <li class="list-group-item skill-item-color">
-              Interpersonal Skills
-            </li>
-            <li class="list-group-item skill-item-color">Reliability</li>
-            <li class="list-group-item skill-item-color">Critical Thinking</li>
-            <li class="list-group-item skill-item-color">Teamwork</li>
-            <li class="list-group-item skill-item-color">Time Management</li>
-          </ul>
-        </section>
-      </article>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Resources</title>
+  <link rel="stylesheet" href="style.css">
 
-      <article id="experience" class="my-card experience">
-        <header>
-          <h2>Experience</h2>
-        </header>
-        <ul class="list-group domine-text">
-          <li class="list-group-item experience-item-color">
-            Pre-Apprentice | Dev/Mission | Sept. 2025 - present | San Francisco,
-            California, United States
-          </li>
-          <li class="list-group-item experience-item-color">
-            Volunteer Shelving Assistant | South San Francisco Public Library |
-            Fall 2018 | South San Francisco, California, United States
-          </li>
-        </ul>
-      </article>
 
-      <!-- projects section -->
-      <article id="projects" class="my-card projects">
-        <header>
-          <h2>Projects</h2>
-        </header>
-        <!-- lyrics/poem page section -->
-        <section class="lyricsPage">
-          <!-- lyrics/poem page header -->
-          <h3 class="domine-text">
-            Lyrics/Poem Page | Dev/Mission | Sept. 2025 - Oct. 2025:
-          </h3>
+</head>
 
-          <!-- lyrics/poem page details -->
-          <ul class="list-group domine-text">
-            <li class="list-group-item project-item-color">
-              Added lyrics of the song I chose to my page using HTML.
-            </li>
-            <li class="list-group-item project-item-color">
-              Edited the style of my lyrics page using CSS.
-            </li>
-          </ul>
+<body class="landing">
+  <nav> </nav>
+  <header>
+    <img src="La.mission.png" class="img-fluid" alt="La Mission Logo">
+    <h1>Community Resources in San Francisco</h1>
+  </header>
+  <main>
+    <p>San Francisco is a wonderful vibrant and beautiful city, known for its iconic views, diverse culture, and
+      creative
+      energy. Yet even amid its beauty, many of our communities <br>
+      continue to face challenges that can make day-to-day life difficult. It’s important to recognize these struggles
+      and
+      support one another by connecting with the many resources <br>
+      available throughout the city. From community centers and food programs to housing support, mental-health
+      services,
+      and job-readiness programs, San Francisco offers a variety<br>
+      of tool that we can take advantage of to help strengthen our neighborhoods and uplift those who need it most.
+    </p>
+  </main>
+  <h2>San Francisco</h2>
 
-          <!-- button to GitHub page for lyrics/poem page -->
-          <a
-            href="https://github.com/alavilla01/Andre-Poem-or-Song"
-            class="btn btn-info domine-text"
-            role="button"
-            >GitHub Page for my Lyrics/Poem Page</a
-          >
-        </section>
-        <!-- about me page section-->
-        <section class="aboutMePage">
-          <!-- about me page header -->
-          <h3 class="domine-text">
-            About Me Page | Dev/Mission | Oct. 2025 - present:
-          </h3>
 
-          <!-- about me page details -->
-          <ul class="list-group domine-text">
-            <li class="list-group-item project-item-color">
-              Wireframed for my page first before coding using Figma.
-            </li>
-            <li class="list-group-item project-item-color">
-              Coding my page after wireframing.
-            </li>
-          </ul>
+  <footer> </footer>
+  <script src="script.js"></script>
+</body>
 
-          <!-- button to GitHub page for about me page -->
-          <a
-            href="https://github.com/alavilla01/Andre-About-Me-Project"
-            class="btn btn-info domine-text"
-            role="button"
-            >GitHub Page for my About Me Page</a
-          >
-
-          <!-- button to Figma wireframing page for about me page -->
-          <a
-            href="https://www.figma.com/design/yxrDPP25iCnFBKzinRTBJM/Andre-Lavilla-s-About-Me-Project?node-id=75101-3&p=f&t=d9y1ovmceOuN0U1s-0"
-            class="btn btn-info domine-text"
-            role="button"
-            >Figma Page for my About Me Page</a
-          >
-        </section>
-
-        <!-- final web app section -->
-        <section class="webApp">
-          <!-- final web app header -->
-          <h3 class="domine-text">
-            Final Web App | Dev/Mission | Work In Progress:
-          </h3>
-
-          <!-- final web app details -->
-          <ul class="list-group domine-text">
-            <li class="list-group-item project-item-color">
-              Will add code to make the final web app about an interesting topic
-              I chose.
-            </li>
-          </ul>
-
-          <!-- button to final web app -->
-          <a href="#" class="btn btn-info domine-text" role="button"
-            >Final Web App In Progress</a
-          >
-        </section>
-
-        <!-- IoT final project section -->
-        <section class="iotProject">
-          <!-- IoT final project header -->
-          <h3 class="domine-text">
-            IoT final project | Dev/Mission | Work In Progress:
-          </h3>
-
-          <!-- IoT final project details -->
-          <ul class="list-group domine-text">
-            <li class="list-group-item project-item-color">
-              Will do the final project about IoT.
-            </li>
-          </ul>
-
-          <!-- button to IoT final project -->
-          <a href="#" class="btn btn-info domine-text" role="button"
-            >IoT Final Project In Progress</a
-          >
-        </section>
-      </article>
-    </main>
-    <footer class="my-container">
-      <section class="my-card footer">
-        <ul class="my-footer">
-          <li class="social-media">
-            <a
-              href="https://www.linkedin.com/in/andre-lavilla-b679091a3/"
-              class="btn btn-info domine-text"
-              role="button"
-            >
-              <i class="fab fa-linkedin"></i>
-              My LinkedIn Profile
-            </a>
-          </li>
-        </ul>
-      </section>
-    </footer>
-  </body>
 </html>
