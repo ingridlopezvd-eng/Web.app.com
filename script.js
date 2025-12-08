@@ -13,82 +13,50 @@ async function getAllRecords() {
     },
   };
 
-  await fetch(
+  await fetch( 
+    url,
     options
   )
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // response is an object w/ .records array
 
-      getResultElement.innerHTML = ""; // clear brews
-
-      let newHtml = "";
+      getResultElement.innerHTML = "Community Resources"; // clear brews
+      let newHtml = "Community Resources";
 
       for (let i = 0; i < data.records.length; i++) {
         let Organization = data.records[i].fields["Organization"]; // here we are getting column values
-        let Logo = data.records[i].fields["Logo"]; //here we are using the Field ID to fecth the name property
-        let neighborhood = data.records[i].fields["Neighborhood"];
+        let Housing = data.records[i].fields["Housing"]; //here we are using the Field ID to fecth the name property
+        let Employment = data.records[i].fields["Employment"];
+        let Legalservices = data.records[i].fields["Legalservices"];
+        let Otherresources = data.records[i].fields["Otherresources"];
+        let Contactc = data.records[i].fields["Contactc"];
+        let Location = data.records[i].fields["Location"];
+        let Link = data.records[i].fields["Link"];
+        let Logo = data.records[i].fields["Logo"];
+        
 
         newHtml += `
         
         <div class="card" style="width: 18rem;">
-  <img src="${Logo[0].url}" class="card-img-top" alt="...">
+  <img src="${Organization[0].url}" class="card-img-top" alt= "${Organization}">
   <div class="card-body">
     <h5 class="card-title">${Organization}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-         <div class="col-xl-4 cardImageText">
-          <div class="card list move border-dark mb-5" style="width: 20rem;">
-          <a href="breweries.html?id=${data.records[i].id}">${
-          logo
-            ? `<img class="card-img-top rounded" alt="${Organization}" src="${Logo[0].url}">`
-            : ``
-        }
-          </a>
-          <p hidden class="card-key">${neighborhood}</p>
+             <p><strong>Housing:</strong> ${Housing || "N/A"}</p>
+              <p><strong>Employment:</strong> ${Employment || "N/A"}</p>
+              <p><strong>Legal Services:</strong> ${Legalservices || "N/A"}</p>
+              <p><strong>Other Resources:</strong> ${Otherresources || "N/A"}</p>
+              <p><strong>Contact:</strong> ${Contact || "N/A"}</p>
+              <p><strong>Location:</strong> ${Location || "N/A"}</p>
+
+              ${Link ? `<a href="${Link}" target="_blank" class="btn btn-primary">Visit Website</a>` : ""}
+            </div>
           </div>
-          </div>
-        </div>
-    
-        
         `;
-      }
+      });
 
       getResultElement.innerHTML = newHtml;
     });
-}
+}}
 
 getAllRecords();
-/*
-  let newHtml = "";
-
-      for (let i = 0; i < data.records.length; i++) {
-        let logo = data.records[i].fields["Logo"]; // here we are getting column values
-        let name = data.records[i].fields["Name"]; //here we are using the Field ID to fecth the name property
-        let neighborhood = data.records[i].fields["Neighborhood"];
-
-        newHtml += `
-        
-         <div class="col-xl-4 cardImageText">
-          <div class="card list move border-dark mb-5" style="width: 20rem;">
-          <a href="breweries.html?id=${data.records[i].id}">${
-          logo
-            ? `<img class="card-img-top rounded" alt="${name}" src="${logo[0].url}">`
-            : ``
-        }
-          </a>
-          <p hidden class="card-key">${neighborhood}</p>
-          </div>
-          </div>
-        </div>
-    
-        
-        `;
-      }
-
-      getResultElement.innerHTML = newHtml;
-    });
-}
-*/
