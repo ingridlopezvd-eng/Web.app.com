@@ -4,7 +4,7 @@ const url =
   "https://api.airtable.com/v0/appgDoPd3xylwod8J/Table%201?maxRecords=3&view=Grid%20view";
 // function for our list view
 async function getAllRecords() {
-  let getResultElement = document.getElementById("San Francisco Resources");
+  let getResultElement = document.getElementById("resources");
 
   const options = {
     method: "GET",
@@ -22,7 +22,7 @@ async function getAllRecords() {
       console.log(data); // response is an object w/ .records array
 
       getResultElement.innerHTML = "Community Resources"; // clear brews
-      let newHtml = "<h3>Community Resources</h3>"
+      let newHtml = "Community Resources";
 
       for (let i = 0; i < data.records.length; i++) {
         let Organization = data.records[i].fields["Organization"]; // here we are getting column values
