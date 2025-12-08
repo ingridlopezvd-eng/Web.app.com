@@ -57,6 +57,6 @@ async function getAllRecords() {
 
       getResultElement.innerHTML = newHtml;
     });
-}}
+}
 
 getAllRecords();
