@@ -7,19 +7,18 @@ body {
 h2 {
   color: #2c3e50;
 }
-.landing {
-  header {
-    text-align: center;
-    position: relative;
-  }
-  h1 {
+.landing header {
+  text-align: center;
+  position: relative;
+}
+.landing h1 {
     position: absolute;
     bottom: 10%;
     width: 100%;
     font-size: 2rem;
-    color: white;
+    color: rgb(249, 200, 215);
   }
-}
+
 .img-fluid{
   width: 100%;
   height: auto;
