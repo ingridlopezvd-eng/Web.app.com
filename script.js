@@ -1,7 +1,7 @@
 "use strict";
 
 const url =
-  "https://api.airtable.com/v0/appgDoPd3xylwod8J/Table%201?maxRecords=3&view=Grid%20view";
+  "https://api.airtable.com/v0/appgDoPd3xylwod8J/Table%201?maxRecords=10&view=Grid%20view";
 // function for our list view
 async function getAllRecords() {
   let getResultElement = document.getElementById("resources");
@@ -22,7 +22,7 @@ async function getAllRecords() {
       console.log(data); // response is an object w/ .records array
 
       getResultElement.innerHTML = "resources"; // clear brews
-      let newHtml = "resources";
+      let newHtml = "";
 
       for (let i = 0; i < data.records.length; i++) {
         let Organization = data.records[i].fields["Organization"]; // here we are getting column values
@@ -33,13 +33,13 @@ async function getAllRecords() {
         let Contact = data.records[i].fields["Contact"];
         let Location = data.records[i].fields["Location"];
         let Link = data.records[i].fields["Link"];
-        let Logo = data.records[i].fields["Logo"];
+        let Logo = data.records[i].fields["Logo"][0].url;
         
 
         newHtml += `
         
         <div class="card" style="width: 18rem;">
-            <img src="${Organization[0].url}" class="card-img-top" alt= "${Organization}">
+            <img src="${Logo}" class="card-img-top" alt= "${Organization}">
             <div class="card-body">
               <h5 class="card-title">${Organization}</h5>
              <p><strong>Housing:</strong> ${Housing || "N/A"}</p>
@@ -49,7 +49,7 @@ async function getAllRecords() {
               <p><strong>Contact:</strong> ${Contact || "N/A"}</p>
               <p><strong>Location:</strong> ${Location || "N/A"}</p>
               <p><strong>Link:</strong> ${Link || "N/A"}</p>
-              <p><strong>Logo:</strong> ${Logo || "N/A"}</p>
+             
 
 
               ${Link ? `<a href="${Link}" target="_blank" class="btn btn-primary">Visit Website</a>` : ""}
