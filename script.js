@@ -13,15 +13,13 @@ async function getAllRecords() {
     },
   };
 
-  await fetch( 
-    url,
-    options
-  )
+  await fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // response is an object w/ .records array
 
-      getResultElement.innerHTML = "resources"; // clear brews
+      getResultElement.innerHTML = ""; // clear brews
+
       let newHtml = "";
 
       for (let i = 0; i < data.records.length; i++) {
@@ -34,7 +32,6 @@ async function getAllRecords() {
         let Location = data.records[i].fields["Location"];
         let Link = data.records[i].fields["Link"];
         let Logo = data.records[i].fields["Logo"][0].url;
-        
 
         newHtml += `
         
@@ -45,18 +42,24 @@ async function getAllRecords() {
              <p><strong>Housing:</strong> ${Housing || "N/A"}</p>
               <p><strong>Employment:</strong> ${Employment || "N/A"}</p>
               <p><strong>Legal Services:</strong> ${Legalservices || "N/A"}</p>
-              <p><strong>Other Resources:</strong> ${Otherresources || "N/A"}</p>
+              <p><strong>Other Resources:</strong> ${
+                Otherresources || "N/A"
+              }</p>
               <p><strong>Contact:</strong> ${Contact || "N/A"}</p>
               <p><strong>Location:</strong> ${Location || "N/A"}</p>
               <p><strong>Link:</strong> ${Link || "N/A"}</p>
              
 
 
-              ${Link ? `<a href="${Link}" target="_blank" class="btn btn-primary">Visit Website</a>` : ""}
+              ${
+                Link
+                  ? `<a href="${Link}" target="_blank" class="btn btn-primary">Visit Website</a>`
+                  : ""
+              }
             </div>
           </div>
         `;
-      };
+      }
 
       getResultElement.innerHTML = newHtml;
     });
