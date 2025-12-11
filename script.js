@@ -1,7 +1,7 @@
 "use strict";
 
 const url =
-  "https://api.airtable.com/v0/appgDoPd3xylwod8J/Table%201?maxRecords=10&view=Grid%20view";
+  "https://api.airtable.com/v0/appgDoPd3xylwod8J/Table%201?maxRecords=12&view=Grid%20view";
 // function for our list view
 async function getAllRecords() {
   let getResultElement = document.getElementById("resources");
@@ -41,13 +41,13 @@ async function getAllRecords() {
               <h5 class="card-title">${Organization}</h5>
              <p><strong>Housing:</strong> ${Housing || "N/A"}</p>
               <p><strong>Employment:</strong> ${Employment || "N/A"}</p>
-              <p><strong>Legal Services:</strong> ${Legalservices || "N/A"}</p>
+              <p><strong>Legal Services:</strong> ${Legal || "N/A"}</p>
               <p><strong>Other Resources:</strong> ${
                 Otherresources || "N/A"
               }</p>
               <p><strong>Contact:</strong> ${Contact || "N/A"}</p>
               <p><strong>Location:</strong> ${Location || "N/A"}</p>
-              <p><strong>Link:</strong> ${Link || "N/A"}</p>
+              
              
 
 
