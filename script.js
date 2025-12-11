@@ -26,7 +26,7 @@ async function getAllRecords() {
         let Organization = data.records[i].fields["Organization"]; // here we are getting column values
         let Housing = data.records[i].fields["Housing"]; //here we are using the Field ID to fecth the name property
         let Employment = data.records[i].fields["Employment"];
-        let Legalservices = data.records[i].fields["Legalservices"];
+        let Legal = data.records[i].fields["Legal"];
         let Otherresources = data.records[i].fields["Otherresources"];
         let Contact = data.records[i].fields["Contact"];
         let Location = data.records[i].fields["Location"];
