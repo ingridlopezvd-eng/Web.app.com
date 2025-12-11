@@ -14,8 +14,12 @@ h2 {
   padding: 0px;
 }
 .landing header {
+  margin: 0 auto;
   text-align: center;
   position: relative;
+}
+.landing header img {
+  width: 100%;
 }
 .landing h1 {
   position: absolute;
@@ -37,12 +41,11 @@ p {
 }
 
 main.my-container {
-  /* max-width: 900px; */
-  margin: 30px auto;
-  padding: 0 20px;
+  padding: 0;
   text-align: center;
   background-color: white;
 }
+
 article {
   padding: 4rem;
 }
@@ -69,7 +72,9 @@ h2 {
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -116,11 +121,13 @@ h2 {
 }
 
 /* ===== Footer ===== */
-footer {
+footer.my-container {
+  width: 100%;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+  padding: 1.5rem 0;
+  /* margin-top: 40px; */
+  margin: 0 auto;
   background: #6a9cce;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
